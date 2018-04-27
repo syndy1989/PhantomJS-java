@@ -18,7 +18,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
-
 import com.deque.axe.AXE;
 import com.nft.parsing_docker.Docker_Parsing;
 
@@ -41,7 +40,7 @@ public class Demo{
 		
 		Delete_Directory();
 		
-		 File file = new File("C:\\docker_accessibility\\datafile.properties");
+		 File file = new File("/home/ec2-user/docker_accessibility/datafile.properties");
 			FileInputStream fileInput = null;
 			try {
 				fileInput = new FileInputStream(file);
@@ -59,9 +58,14 @@ public class Demo{
 			
 			
 		
-		System.setProperty("phantomjs.binary.path", "C:\\docker_accessibility\\phantomjs.exe");        
+		File file1 = new File("/usr/local/bin/phantomjs");
+        	System.setProperty("phantomjs.binary.path", file1.getAbsolutePath());
+		//System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");     
+
+		//System.getProperty("webdriver.chrome.driver");   
 
 		WebDriver driver = new PhantomJSDriver();
+
 		
 		driver.get(prop.getProperty("URL"));
 		
@@ -118,7 +122,7 @@ public class Demo{
 
 
 	public static Delete_Directory Delete_Directory() {
-		File dir = new File("C://repo");
+		File dir = new File("/home/ec2-user/docker_accessibility/repo");
 		File[] currList;
 		Stack<File> stack = new Stack<File>();
 		stack.push(dir);
