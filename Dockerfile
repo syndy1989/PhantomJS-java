@@ -7,6 +7,8 @@ ADD https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64
 RUN tar -xvjf phantom.tar.bz2
 RUN mv phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/bin/
 
+RUN pwd
+
 WORKDIR /home/ec2-user
 
 RUN mkdir -p docker_accessibility
