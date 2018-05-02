@@ -67,7 +67,7 @@ public class Demo{
 		WebDriver driver = new PhantomJSDriver();
 
 		
-		driver.get(prop.getProperty("URL"));
+		driver.get("http://demo.testfire.net/");
 		
 		
 		//calling method axe
@@ -89,6 +89,30 @@ public class Demo{
 	String fileresult=dynamic_filecreation(result1, jsonresults);
 		filelist.add(fileresult);
 		pagename.add("home");
+		
+		driver.get("http://demo.testfire.net/default.aspx?content=personal_deposit.htm");
+		
+		
+		//calling method axe
+		try {
+			jsonresults=run_axe(driver, scriptUrl);
+		System.out.println("jsonresults"+jsonresults);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//calling substring for unique file name
+		result1=Sub_String_url(driver.getCurrentUrl(), 1);
+		
+		
+		
+		//creating file with unique name
+	String fileresult=dynamic_filecreation(result1, jsonresults);
+		filelist.add(fileresult);
+		pagename.add("DepositProduct");
+		
 		
 		Docker_Parsing value=new Docker_Parsing();
 		
