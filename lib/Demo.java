@@ -113,6 +113,29 @@ public class Demo{
 		filelist.add(fileresult);
 		pagename.add("DepositProduct");
 		
+		driver.get("http://demo.testfire.net/default.aspx?content=personal_loans.htm");
+		
+		
+		//calling method axe
+		try {
+			jsonresults=run_axe(driver, scriptUrl);
+		System.out.println("jsonresults"+jsonresults);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//calling substring for unique file name
+		result1=Sub_String_url(driver.getCurrentUrl(), 1);
+		
+		
+		
+		//creating file with unique name
+	 fileresult=dynamic_filecreation(result1, jsonresults);
+		filelist.add(fileresult);
+		pagename.add("LoanProducts");
+		
 		
 		Docker_Parsing value=new Docker_Parsing();
 		
