@@ -113,7 +113,7 @@ public class Demo{
 		filelist.add(fileresult);
 		pagename.add("DepositProduct");
 		
-		driver.get("http://demo.testfire.net/default.aspx?content=personal_loans.htm");
+		driver.get("https://www.ndtv.com/");
 		
 		
 		//calling method axe
@@ -134,7 +134,7 @@ public class Demo{
 		//creating file with unique name
 	 fileresult=dynamic_filecreation(result1, jsonresults);
 		filelist.add(fileresult);
-		pagename.add("LoanProducts");
+		pagename.add("NDTV");
 		
 		
 		Docker_Parsing value=new Docker_Parsing();
