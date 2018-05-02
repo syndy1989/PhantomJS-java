@@ -109,7 +109,7 @@ public class Demo{
 		
 		
 		//creating file with unique name
-	String fileresult=dynamic_filecreation(result1, jsonresults);
+	 fileresult=dynamic_filecreation(result1, jsonresults);
 		filelist.add(fileresult);
 		pagename.add("DepositProduct");
 		
