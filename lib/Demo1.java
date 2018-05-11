@@ -74,12 +74,12 @@ public class Demo1{
 		
 		
 		
-		driver.get("https://www.neotys.com/");
+		driver.get("http://demo.testfire.net/default.aspx?content=personal_loans.htm");
 		
 		
 		//calling method axe
 		filelist=collect.inputCollector(driver, 3, scriptUrl);
-		pagename=collect.Pagename("Neotys");
+		pagename=collect.Pagename("PersonalLoans");
 		
 		
 		collect.parsingfile(filelist, pagename);
