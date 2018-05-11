@@ -20,6 +20,7 @@ import org.json.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import com.nft.parsing.Axe_InputCollector;
 
 import com.deque.axe.AXE;
 
